@@ -4,7 +4,7 @@
 	"id": "projectorgrid-osc",
 	"name": "projectorgrid-osc",
 	"shortname": "projectorgrid-osc",
-	"description": "A short one line description of your module",
+	"description": "Control ProjectorGrid projectors over OSC, targeting all projectors or a named group",
 	"version": "0.0.0",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-projectorgrid-osc.git",
