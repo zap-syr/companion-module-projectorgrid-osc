@@ -1,7 +1,7 @@
 module.exports = function (self) {
 	self.setVariableDefinitions({
-		variable1: { name: 'My first variable' },
-		variable2: { name: 'My second variable' },
-		variable3: { name: 'Another variable' },
+		status_online: { name: 'Online projectors' },
+		status_offline: { name: 'Offline projectors' },
+		status_warning: { name: 'Projectors with warnings' },
 	})
 }
