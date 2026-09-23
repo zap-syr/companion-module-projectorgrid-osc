@@ -16,7 +16,8 @@
 		"yarn": "^4"
 	},
 	"dependencies": {
-		"@companion-module/base": "~2.0.4"
+		"@companion-module/base": "~2.0.4",
+		"osc": "^2.4.5"
 	},
 	"devDependencies": {
 		"@companion-module/tools": "^3.1.0",
