@@ -1,18 +1,18 @@
 {
 	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
 	"type": "connection",
-	"id": "your-module-name",
-	"name": "your-module-name",
-	"shortname": "module-shortname",
+	"id": "projectorgrid-osc",
+	"name": "projectorgrid-osc",
+	"shortname": "projectorgrid-osc",
 	"description": "A short one line description of your module",
 	"version": "0.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
-	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-projectorgrid-osc.git",
+	"bugs": "https://github.com/bitfocus/companion-module-projectorgrid-osc/issues",
 	"maintainers": [
 		{
-			"name": "Your name",
-			"email": "Your email"
+			"name": "Aleksei Vlasov",
+			"email": "aleksei.vlasov@proton.me"
 		}
 	],
 	"runtime": {
@@ -22,7 +22,7 @@
 		"entrypoint": "../src/main.js"
 	},
 	"legacyIds": [],
-	"manufacturer": "Your company",
-	"products": ["Your product"],
-	"keywords": []
+	"manufacturer": "Projector Grid",
+	"products": ["OSC"],
+	"keywords": ["Protocol", "Panasonic", "Projector"]
 }
