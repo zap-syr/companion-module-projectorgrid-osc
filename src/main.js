@@ -4,6 +4,7 @@ const UpgradeScripts = require('./upgrades')
 const UpdateActions = require('./actions')
 const UpdateFeedbacks = require('./feedbacks')
 const UpdateVariableDefinitions = require('./variables')
+const UpdatePresets = require('./presets')
 const { STATUS_ADDRESSES, STATUS_REQUEST_ADDRESS } = require('./osc-addresses')
 
 // How often we probe ProjectorGrid for a status update while idle.
@@ -29,6 +30,7 @@ class ModuleInstance extends InstanceBase {
 		this.updateActions()
 		this.updateFeedbacks()
 		this.updateVariableDefinitions()
+		this.updatePresets()
 
 		this.updateStatus(InstanceStatus.Connecting)
 		this.openSocket()
@@ -93,6 +95,10 @@ class ModuleInstance extends InstanceBase {
 
 	updateVariableDefinitions() {
 		UpdateVariableDefinitions(this)
+	}
+
+	updatePresets() {
+		UpdatePresets(this)
 	}
 
 	// --- OSC connection handling -------------------------------------------------
@@ -203,9 +209,11 @@ class ModuleInstance extends InstanceBase {
 				break
 			case STATUS_ADDRESSES.OFFLINE:
 				this.setVariableValues({ status_offline: value })
+				this.checkFeedbacks('hasOffline')
 				break
 			case STATUS_ADDRESSES.WARNING:
 				this.setVariableValues({ status_warning: value })
+				this.checkFeedbacks('hasWarning')
 				break
 			default:
 				this.log('debug', `Unhandled OSC message: ${message.address}`)
